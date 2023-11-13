@@ -1,7 +1,14 @@
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 const LoaderHome = () => {
-
+    const [state] = useState({
+        indonesia: "Halo",
+        english: "Hello",
+        arab: "مرحبًا",
+        prancis: "Bonjour",
+        rusia: "привет"
+    })
     return (
         <motion.section
             initial={{ 
@@ -27,7 +34,7 @@ const LoaderHome = () => {
                         }
                         }
                     }
-                >Halo</motion.span>
+                >{state.indonesia}</motion.span>
                 <motion.span
                     initial={{ opacity: 0 }}
                     animate={{
@@ -38,7 +45,7 @@ const LoaderHome = () => {
                         }
                         }
                     }
-                >Hello</motion.span>
+                >{state.english}</motion.span>
                 <motion.span
                     initial={{ opacity: 0 }}
                     animate={{
@@ -49,7 +56,7 @@ const LoaderHome = () => {
                         }
                         }
                     }
-                >مرحبًا</motion.span>
+                >{state.arab}</motion.span>
                 <motion.span
                     initial={{ opacity: 0 }}
                     animate={{
@@ -60,7 +67,7 @@ const LoaderHome = () => {
                         }
                         }
                     }
-                >Bonjour</motion.span>
+                >{state.prancis}</motion.span>
                 <motion.span
                     initial={{ opacity: 0 }}
                     animate={{
@@ -68,7 +75,7 @@ const LoaderHome = () => {
                         transition: { delay: 1.7 },
                         }
                     }
-                >привет</motion.span>
+                >{state.rusia}</motion.span>
             </div>
         </motion.section>
     )

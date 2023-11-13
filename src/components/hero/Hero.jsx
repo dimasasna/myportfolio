@@ -1,9 +1,15 @@
+import { useState } from 'react'
 import profil from '../../assets/profil.webp'
 import "./hero.css"
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Typewriter from 'typewriter-effect'
 
 const Hero = () => {
+  const [state] = useState({
+    name: "Dimas Asna Nugraha",
+    title1: "Software Engineer",
+    title2: "Website Developer"
+  })
   const { scrollYProgress } = useScroll()
   const right = useTransform(scrollYProgress, [0, 1], [0, 400])
   const left = useTransform(scrollYProgress, [0, 1], [0, -400])
@@ -44,10 +50,10 @@ const Hero = () => {
                   duration: 1,
                   delay: 2.1
                 }
-              }}>Dimas Asna Nugraha</motion.h1>
+              }}>{state.name}</motion.h1>
           </div>
         </div>
-        <div className='absolute top-[20rem]'>
+        <div className='absolute top-[18rem] flex justify-start lg:-ml-20 -ml-10'>
           <motion.h1
             initial={{ x: -1800 }}
             animate={{
@@ -58,7 +64,7 @@ const Hero = () => {
               },
             }}
             style={{ x: right }}
-            className='absolute uppercase  pointer-events-none italic text-primary   z-[1] whitespace-nowrap text-[5rem] lg:text-[10rem] font-extrabold  textFilled'>Software Engineer</motion.h1>
+            className='absolute uppercase  pointer-events-none italic text-primary   z-[1] whitespace-nowrap text-[5rem] xl:text-[10rem] 2xl:text-[12rem]  font-extrabold  textFilled'>{state.title1}</motion.h1>
           <motion.h1
             initial={{ x: -1800 }}
             animate={{
@@ -69,9 +75,9 @@ const Hero = () => {
               }
             }}
             style={{ x: right }}
-            className='absolute uppercase  pointer-events-none italic text-primary  whitespace-nowrap text-[5rem] lg:text-[10rem] font-extrabold textOutlined z-[3]'>Software Engineer</motion.h1>
+            className='absolute uppercase  pointer-events-none italic text-primary  whitespace-nowrap text-[5rem] lg:text-[10rem] 2xl:text-[12rem] font-extrabold textOutlined z-[3]'>{state.title1}</motion.h1>
         </div>
-        <div className='absolute top-[24rem] lg:top-[28rem]'>
+        <div className='absolute top-[24rem] lg:top-[27rem]'>
           <motion.h1
             initial={{ x: -1800 }}
             animate={{
@@ -82,7 +88,7 @@ const Hero = () => {
               }
             }}
             style={{ x: left }}
-            className='absolute uppercase  pointer-events-none italic text-primary z-[1] whitespace-nowrap text-[5rem] lg:text-[10rem] font-extrabold  textFilled'>Website Developer</motion.h1>
+            className='absolute uppercase  pointer-events-none italic text-primary z-[1] whitespace-nowrap text-[5rem] lg:text-[10rem] 2xl:text-[12rem] font-extrabold  textFilled'>{state.title2}</motion.h1>
           <motion.h1
             initial={{ x: 1800 }}
             animate={{
@@ -93,7 +99,7 @@ const Hero = () => {
               }
             }}
             style={{ x: left }}
-            className='absolute uppercase  pointer-events-none italic text-primary  whitespace-nowrap text-[5rem] lg:text-[10rem] font-extrabold textOutlined z-[3]'>Website Developer</motion.h1>
+            className='absolute uppercase  pointer-events-none italic text-primary  whitespace-nowrap text-[5rem] lg:text-[10rem] 2xl:text-[12rem] font-extrabold textOutlined z-[3]'>{state.title2}</motion.h1>
         </div>
         <div className='h-[100vh] flex justify-center items-center'>
           <motion.img
