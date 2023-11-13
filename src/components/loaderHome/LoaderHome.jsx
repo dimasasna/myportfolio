@@ -22,7 +22,7 @@ const LoaderHome = () => {
                 }
              }}
              exit={{ y: window.innerWidth }}
-            className='bg-color-text fixed w-[100%] h-[100vh] z-10'>
+            className='bg-[#010101] fixed w-[100%] h-[100vh] z-10'>
             <div className='w-[100%] h-[100vh] text-primary font-bold flex flex-col justify-center items-center leading-[0px] text-[2rem]'>
                 <motion.span
                     initial={{ opacity: 0 }}

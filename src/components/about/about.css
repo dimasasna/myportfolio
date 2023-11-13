@@ -1,4 +1,4 @@
-.textOutlined{
+.textOutlined {
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 0.1px; /* atau nilai yang lebih kecil */
 }

@@ -15,8 +15,8 @@ const About = () => {
         <span className='textOutlined'>{state.typografi}</span>
         <span className='textOutlined lg:hidden'>{state.typografi}</span>
       </div>
-      <div className='z-[2] px-4 lg:w-[60%] leading-[2rem] font-bold text-primary'>
-        <h1 className='lg:text-4xl text-xl font-thin mb-4 relative'>{state.content}</h1>
+      <div className='z-[2] px-4 lg:w-[60%] leading-[2rem] font-extrabold text-primary'>
+        <h1 className='lg:text-4xl text-xl font-thin mb-4 relative'>Hi there! 👋 Im Dimas Asna Nugraha, a passionate individual in the world of <span className="textOutlined text-yellow-200 hover:text-primary cursor-pointer">web development</span>. Whether its crafting beautiful <span className="textOutlined text-yellow-200 hover:text-primary cursor-pointer">frontend interfaces</span> or diving into the complexities of <span className="textOutlined text-yellow-200 hover:text-primary cursor-pointer">backend development</span>, I find joy in bringing ideas to life through code.</h1>
         <a className=' underline text-2xl mt-4 hover:text-secondary' href="/">{state.link}<i className="uil uil-arrow-up-right"></i></a>
       </div>
     </section>
