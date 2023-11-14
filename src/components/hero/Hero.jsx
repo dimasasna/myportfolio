@@ -3,6 +3,8 @@ import profil from '../../assets/profil.webp'
 import "./hero.css"
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Typewriter from 'typewriter-effect'
+import ScrollVelocity from './scroll-velocity/ScrollVelocity'
+
 
 const Hero = () => {
   const [state] = useState({
@@ -64,7 +66,7 @@ const Hero = () => {
               },
             }}
             style={{ x: right }}
-            className='absolute uppercase  pointer-events-none italic text-primary   z-[1] whitespace-nowrap text-[5rem] xl:text-[10rem] 2xl:text-[12rem]  font-extrabold  textFilled'>{state.title1}</motion.h1>
+            className='absolute uppercase  pointer-events-none italic text-primary   z-[1] whitespace-nowrap text-[5rem] xl:text-[10rem] 2xl:text-[12rem]  font-extrabold  textFilled'><ScrollVelocity baseVelocity={5}>{state.title1}</ScrollVelocity></motion.h1>
           <motion.h1
             initial={{ x: -1800 }}
             animate={{
@@ -75,7 +77,7 @@ const Hero = () => {
               }
             }}
             style={{ x: right }}
-            className='absolute uppercase  pointer-events-none italic text-primary  whitespace-nowrap text-[5rem] lg:text-[10rem] 2xl:text-[12rem] font-extrabold textOutlined z-[3]'>{state.title1}</motion.h1>
+            className='absolute uppercase  pointer-events-none italic text-primary  whitespace-nowrap text-[5rem] lg:text-[10rem] 2xl:text-[12rem] font-extrabold textOutlined z-[3]'><ScrollVelocity baseVelocity={5}>{state.title1}</ScrollVelocity></motion.h1>
         </div>
         <div className='absolute top-[24rem] lg:top-[27rem]'>
           <motion.h1
@@ -88,7 +90,7 @@ const Hero = () => {
               }
             }}
             style={{ x: left }}
-            className='absolute uppercase  pointer-events-none italic text-primary z-[1] whitespace-nowrap text-[5rem] lg:text-[10rem] 2xl:text-[12rem] font-extrabold  textFilled'>{state.title2}</motion.h1>
+            className='absolute uppercase  pointer-events-none italic text-primary z-[1] whitespace-nowrap text-[5rem] lg:text-[10rem] 2xl:text-[12rem] font-extrabold  textFilled'><ScrollVelocity baseVelocity={-5}>{state.title2}</ScrollVelocity></motion.h1>
           <motion.h1
             initial={{ x: 1800 }}
             animate={{
@@ -99,7 +101,7 @@ const Hero = () => {
               }
             }}
             style={{ x: left }}
-            className='absolute uppercase  pointer-events-none italic text-primary  whitespace-nowrap text-[5rem] lg:text-[10rem] 2xl:text-[12rem] font-extrabold textOutlined z-[3]'>{state.title2}</motion.h1>
+            className='absolute uppercase  pointer-events-none italic text-primary  whitespace-nowrap text-[5rem] lg:text-[10rem] 2xl:text-[12rem] font-extrabold textOutlined z-[3]'><ScrollVelocity baseVelocity={-5}>{state.title2}</ScrollVelocity></motion.h1>
         </div>
         <div className='h-[100vh] flex justify-center items-center'>
           <motion.img
@@ -114,6 +116,7 @@ const Hero = () => {
             className='w-[300px] lg:w-[600px] lg:h-[600px] z-[2]  border-4  border-primary' src={profil} alt="profil" />
         </div>
       </div>
+      
     </section>
   )
 }
