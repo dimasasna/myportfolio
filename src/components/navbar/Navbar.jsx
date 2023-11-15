@@ -17,7 +17,7 @@ const Navbar = () => {
         <span>{state.name1}</span>
         <span>{state.name2}</span>
       </div>
-      <div className='flex flex-row fixed z-[4] justify-center items-center bottom-[3rem] p-[1rem] gap-4 rounded-[20px] bg-[#ffffff9f] lg:bg-transparent'>
+      <div className='flex flex-row fixed z-[4] justify-center items-center bottom-[1.5rem] p-[1rem] gap-4 rounded-[20px] bg-[#ffffff9f] lg:bg-transparent'>
         <div className='lg:fixed static lg:right-0 lg:top-0 flex lg:flex-col lg:p-4 text-primary font-semibold lg:items-end z-[4] flex-row gap-4'>
           <a href="#home">
             <i className="uil uil-estate lg:hidden text-4xl"></i>

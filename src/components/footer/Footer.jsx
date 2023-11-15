@@ -17,7 +17,7 @@ const Footer = () => {
 
   return (
     <section id='footer' className='w-[100%] lg:h-[35vh] h-[60vh] bg-[#181818] flex flex-col justify-center items-center gap-6 px-4 lg:px-0 '>
-      <div className='flex justify-center items-center gap-1 text-2xl lg:text-4xl tracking-tighter font-bold uppercase text-primary -mt-24 lg:-mt-0'>
+      <div className='flex justify-center items-center text-2xl lg:text-4xl tracking-tighter font-bold uppercase text-primary -mt-24 lg:-mt-0'>
         <Lottie className="h-[100px]" animationData={mail}/>
         {/* <img className='w-[50px] h-[50px] lg:w-[70px] lg:h-[70px] rounded-[50%]' src={Picture} alt="FooterImage" /> */}
         <span>{state.title}</span>
