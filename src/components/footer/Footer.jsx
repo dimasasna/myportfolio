@@ -1,5 +1,6 @@
 import { useState } from "react"
-import Picture from "../../assets/profil.webp"
+import mail from "../../assets/mail.json"
+import Lottie from "lottie-react"
 
 const Footer = () => {
 
@@ -16,8 +17,9 @@ const Footer = () => {
 
   return (
     <section id='footer' className='w-[100%] lg:h-[35vh] h-[60vh] bg-[#181818] flex flex-col justify-center items-center gap-6 px-4 lg:px-0 '>
-      <div className='flex justify-center items-center gap-4 text-2xl lg:text-4xl tracking-tighter font-bold uppercase text-primary -mt-24 lg:-mt-0'>
-        <img className='w-[50px] h-[50px] lg:w-[70px] lg:h-[70px] rounded-[50%]' src={Picture} alt="FooterImage" />
+      <div className='flex justify-center items-center gap-1 text-2xl lg:text-4xl tracking-tighter font-bold uppercase text-primary -mt-24 lg:-mt-0'>
+        <Lottie className="h-[100px]" animationData={mail}/>
+        {/* <img className='w-[50px] h-[50px] lg:w-[70px] lg:h-[70px] rounded-[50%]' src={Picture} alt="FooterImage" /> */}
         <span>{state.title}</span>
       </div>
       <div className='flex flex-col lg:flex-row lg:w-auto w-[70%] gap-4 lg:text-2xl  text-primary '>
