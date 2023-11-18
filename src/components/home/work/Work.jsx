@@ -1,7 +1,7 @@
 import { useState } from "react"
 import CardWork from "./card-work/CardWork"
-import hisocial from "../../assets/hisocial.webp"
-import beshoes from "../../assets/shoeslaundry.webp"
+import hisocial from "../../../assets/hisocial.webp"
+import beshoes from "../../../assets/shoeslaundry.webp"
 
 
 

@@ -2,6 +2,7 @@ import "./about.css"
 import AOS from 'aos';
 import { useState } from "react";
 import 'aos/dist/aos.css';
+import { Link } from "react-router-dom";
 
 
 const About = () => {
@@ -20,7 +21,7 @@ const About = () => {
       </div>
       <div data-aos="fade-down" className='z-[2] px-4 lg:w-[60%] leading-[2rem] font-extrabold text-primary'>
         <h1 className='lg:text-4xl text-xl font-thin mb-4 relative'>Hi there! Im Dimas Asna Nugraha, a passionate about <span className=" text-yellow-200 hover:text-primary cursor-pointer">Fullstack Developer</span>. Whether its crafting beautiful <span className="text-yellow-200 hover:text-primary cursor-pointer">frontend interfaces</span> or diving into the complexities of <span className="text-yellow-200 hover:text-primary cursor-pointer">backend development</span>.</h1>
-        <a className=' underline text-2xl mt-4 hover:text-secondary' href="/">{state.link}<i className="uil uil-arrow-up-right"></i></a>
+        <Link to={"/about"}><a className=' underline text-2xl mt-4 hover:text-secondary'>{state.link}<i className="uil uil-arrow-up-right"></i></a></Link>
       </div>
     </section>
   )

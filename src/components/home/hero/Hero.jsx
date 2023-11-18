@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import profil from '../../assets/profil.webp'
+import profil from '../../../assets/profil.webp'
 import "./hero.css"
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Typewriter from 'typewriter-effect'
 import ScrollVelocity from './scroll-velocity/ScrollVelocity'
-import hantu from "../../assets/hantu.json"
+import hantu from "../../../assets/hantu.json"
 import Lottie from "lottie-react";
 
 
