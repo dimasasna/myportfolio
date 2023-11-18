@@ -26,7 +26,7 @@ const Footer = () => {
       <div className='flex flex-col lg:flex-row lg:w-auto w-[70%] gap-4 lg:text-2xl  text-primary '>
         <a className='bg-primary text-color-text py-[0.3rem] px-[1rem] lg:px-[1.5rem] rounded-[30px] hover:bg-color-text hover:border hover:border-primary hover:text-primary transition-all duration-500' href="mailto:dimas.asna@gmail.com" target="_blank" rel="noopener noreferrer">{state.email}</a>
         <a className='bg-primary text-color-text py-[0.3rem] px-[1rem] lg:px-[1.5rem] rounded-[30px] hover:bg-color-text hover:border hover:border-primary hover:text-primary transition-all duration-500' href="https://api.whatsapp.com/send/?phone=087736854680&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">{state.wa}</a>
-        <Link to={"/about"}><a className='bg-primary text-color-text py-[0.3rem] px-[1rem] lg:px-[1.5rem] rounded-[30px] hover:bg-color-text hover:border hover:border-primary hover:text-primary transition-all duration-500 cursor-pointer'>{state.contact}</a></Link>
+        <Link className='bg-primary  text-color-text py-[0.3rem] px-[1rem] lg:px-[1.5rem] rounded-[30px] hover:bg-color-text hover:border hover:border-primary hover:text-primary transition-all duration-500 cursor-pointer' to={"/about"}>{state.contact}</Link>
       </div>
       <div className='text-primary text-xl flex flex-wrap justify-center gap-[1rem]'>
         <a className=' hover:text-secondary' href="https://www.youtube.com/channel/UC9GMON4q-RXz1baGIuVzY7Q" target="_blank" rel="noopener noreferrer">{state.youtube}</a>

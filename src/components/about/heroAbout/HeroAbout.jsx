@@ -2,7 +2,7 @@ import profil from "./../../../assets/profil.webp"
 
 export default function HeroAbout() {
   return (
-    <section className=" w-[100%] h-auto text-primary">
+    <section className="w-[100%] text-primary">
       <div className="lg:p-28 p-4 w-[100%] flex flex-col lg:flex-row">
         <div className="lg:w-[70%] w-full flex flex-col gap-6">
           <div className="flex lg:flex-row flex-col gap-4 items-center mt-12 lg:mt-0">

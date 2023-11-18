@@ -10,12 +10,12 @@ import Typografi from "../components/about/typografi/Typografi";
 export default function About() {
   return (
     <div className="bg-color-text ">
-      <LoaderAbout/>
-      <Back/>
-      <HeroAbout/>
-      <Typografi/>
-      <Contact/>
-      <FooterAbout/>
+      <Back />
+      <LoaderAbout />
+      <HeroAbout />
+      <Typografi />
+      <Contact />
+      <FooterAbout />
     </div>
   )
 }
