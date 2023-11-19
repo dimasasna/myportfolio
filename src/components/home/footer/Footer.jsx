@@ -1,8 +1,7 @@
-import { useState } from "react"
-import mail from "../../../assets/mail.json"
 import Lottie from "lottie-react"
+import { useState } from "react"
 import { Link } from "react-router-dom"
-import { Fade } from "react-awesome-reveal"
+import mail from "../../../assets/mail.json"
 
 const Footer = () => {
 
@@ -30,12 +29,10 @@ const Footer = () => {
           <Link className='bg-primary  text-color-text py-[0.3rem] px-[1rem] lg:px-[1.5rem] rounded-[30px] hover:bg-color-text hover:border hover:border-primary hover:text-primary transition-all duration-500 cursor-pointer' to={"/about"}>{state.contact}</Link>
       </div>
       <div className='text-primary text-xl flex flex-wrap justify-center gap-[1rem]'>
-        <Fade direction="up">
           <a className=' hover:text-secondary' href="https://www.youtube.com/channel/UC9GMON4q-RXz1baGIuVzY7Q" target="_blank" rel="noopener noreferrer">{state.youtube}</a>
           <a className=' hover:text-secondary' href="https://www.linkedin.com/in/dimasasna/" target="_blank" rel="noopener noreferrer">{state.linkedin}</a>
           <a className=' hover:text-secondary' href="https://www.facebook.com/mas.dimkas.1/" target="_blank" rel="noopener noreferrer">{state.facebook}</a>
           <a className=' hover:text-secondary' href="https://www.instagram.com/dimasasna/" target="_blank" rel="noopener noreferrer">{state.instagram}</a>
-        </Fade>
       </div>
     </section>
   )
