@@ -2,12 +2,14 @@ import { useState } from "react"
 import CardWork from "./card-work/CardWork"
 import hisocial from "../../../assets/hisocial.webp"
 import beshoes from "../../../assets/shoeslaundry.webp"
+import { Fade } from "react-awesome-reveal"
 
 
 
 const Work = () => {
     const [state] = useState({
         typografi: "work",
+        title: "Featured Project"
     })
 
     const hiSocial = {
@@ -37,11 +39,13 @@ const Work = () => {
                 </div>
                 <span className='text-2xl absolute lg:relative italic pt-12 lg:mr-12 lg:pt-0'>{state.title}</span>
             </div>
-            <div className="flex flex-col gap-5 mt-44 lg:mt-0">
-            <CardWork nomor={hiSocial.nomor} title={hiSocial.title} desc={hiSocial.desc} img={hiSocial.img} altImage={hiSocial.altImage} link={hiSocial.link}/>
-            <CardWork nomor={beShoes.nomor} title={beShoes.title} desc={beShoes.desc} img={beShoes.img} altImage={beShoes.altImage} link={beShoes.link}/>
+            <div className="flex relative  flex-col gap-5 mt-44 lg:mt-0">
+                <Fade direction="left">
+                <CardWork nomor={hiSocial.nomor} title={hiSocial.title} desc={hiSocial.desc} img={hiSocial.img} altImage={hiSocial.altImage} link={hiSocial.link} /></Fade>
+                <Fade  direction="left">
+                <CardWork nomor={beShoes.nomor} title={beShoes.title} desc={beShoes.desc} img={beShoes.img} altImage={beShoes.altImage} link={beShoes.link} /></Fade>
             </div>
-            
+
 
         </section>
     )

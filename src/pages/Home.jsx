@@ -1,3 +1,4 @@
+
 import About from "../components/home/about/About"
 import Footer from "../components/home/footer/Footer"
 import Hero from "../components/home/hero/Hero"

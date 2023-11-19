@@ -1,6 +1,7 @@
 import { useState } from "react"
 import "./service.css"
 import { motion, useScroll, useTransform } from 'framer-motion'
+import { Fade } from "react-awesome-reveal"
 
 const Service = () => {
     const [state] = useState({
@@ -36,19 +37,24 @@ const Service = () => {
                     {state.developer} - </motion.span>
             </div>
             <div className='flex lg:flex-col justify-center items-center gap-[1rem]'>
-                <div className='flex flex-col lg:flex-row gap-[1rem] text-2xl text-center'>
-                    <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.html}</span>
-                    <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.css}</span>
-                    <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.javascript}</span>
-                    <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.php}</span>
-                    <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.react}</span>
-                </div>
-                <div className='flex flex-col lg:flex-row gap-[1rem] text-2xl text-center'>
-                    <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.sql}</span>
-                    <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.bootstrap}</span>
-                    <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.laravel}</span>
-                    <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.tailwind}</span>
-                </div>
+                
+                    <div className='flex flex-col lg:flex-row gap-[1rem] text-2xl text-center'>
+                    <Fade cascade direction="left" damping={0.2}>
+                        <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.html}</span>
+                        <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.css}</span>
+                        <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.javascript}</span>
+                        <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.php}</span>
+                        <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.react}</span>
+                        </Fade>
+                    </div>
+                    <div className='flex flex-col lg:flex-row gap-[1rem] text-2xl text-center'>
+                        <Fade cascade direction="right" damping={0.2}>
+                        <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.sql}</span>
+                        <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.bootstrap}</span>
+                        <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.laravel}</span>
+                        <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.tailwind}</span>
+                        </Fade>
+                    </div>
                 
             </div>
         </section>

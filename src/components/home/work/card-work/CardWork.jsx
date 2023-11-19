@@ -7,7 +7,7 @@ const CardWork = (props) => {
     })
     return (
         <div>
-            <div className='flex lg:flex-row flex-col mt-14 lg:mt-0  justify-center items-center gap-4 lg:translate-y-[-6rem] translate-y-[-5rem] w-[100%] h-auto'>
+            <div className='flex relative overflow-hidden whitespace-nowrap lg:flex-row flex-col mt-14 lg:mt-0  justify-center items-center gap-4 lg:translate-y-[-6rem] translate-y-[-5rem] w-[100%] h-auto'>
                 <div className='flex flex-col text-primary gap-5 group overflow-hidden'>
                     <img className='lg:w-[450px] lg:h-[450px] group-hover:scale-105 transition-all duration-500 ' src={props.img} alt={props.altImg} />
                     <div className='flex flex-row items-center gap-2'>
