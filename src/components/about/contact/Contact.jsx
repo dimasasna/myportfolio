@@ -55,10 +55,10 @@ export default function Contact() {
         <div className="lg:w-[50%] flex flex-col gap-4">
           <form ref={form} onSubmit={sendEmail} >
             <div className="grid grid-cols-2 gap-y-4 gap-x-2">
-              <input className="bg-transparent border py-2 px-5 rounded-lg" placeholder="Name" type="text" name="user_name"/>
-              <input className="bg-transparent border py-2 px-5 rounded-lg" placeholder="Email" type="email" name="user_email"/>
-              <input className="col-span-2 bg-transparent border py-2 px-5 rounded-lg" placeholder="Subject" type="text" name="subject"/>
-              <textarea className="col-span-2 bg-transparent border py-2 px-5 rounded-lg h-[100px]" placeholder="Message" name="message" id="" cols="30" rows="10"></textarea>
+              <input className="bg-transparent border py-2 px-5 rounded-lg" placeholder="Name" type="text" name="user_name" required/>
+              <input className="bg-transparent border py-2 px-5 rounded-lg" placeholder="Email" type="email" name="user_email" required/>
+              <input className="col-span-2 bg-transparent border py-2 px-5 rounded-lg" placeholder="Subject" type="text" name="subject" required/>
+              <textarea className="col-span-2 bg-transparent border py-2 px-5 rounded-lg h-[100px]" placeholder="Message" name="message" required cols="30" rows="10"></textarea>
             </div>
             <button  type="submit" className="bg-[#383838] mx-auto px-3 py-2 rounded-lg hover:bg-[#595959] mt-4 w-full">Send It!</button>
           </form>
