@@ -1,26 +1,31 @@
 import emailjs from '@emailjs/browser';
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { toast } from "react-toastify";
+import { ClipLoader } from 'react-spinners';
 
 
 export default function Contact() {
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    setIsLoading(true);
     emailjs.sendForm('service_d6qcstu', 'template_9mwwi4r', form.current, '2Gb7DJSg_R0gnNCrz')
       .then((result) => {
-          notifySucces(result)
+          notifySuccess(result)
+          setIsLoading(false);
       }, (error) => {
           notifyError(error)
+          setIsLoading(false);
       });
     e.target.reset()
   };
 
-  const notifySucces = () => {
-    toast.success('Success Send Message', {
+  const notifySuccess = () => {
+    toast.success('Message Sent Successfully!', {
       position: "top-center",
       autoClose: 5000,
       hideProgressBar: false,
@@ -33,7 +38,7 @@ export default function Contact() {
   }
 
   const notifyError = () => {
-    toast.error('Failed Send Message', {
+    toast.error('Oops! Something Went Wrong While Sending the Message.', {
       position: "top-center",
       autoClose: 5000,
       hideProgressBar: false,
@@ -43,6 +48,7 @@ export default function Contact() {
       progress: undefined,
       theme: "dark",
     });
+
   }
   return (
     <section  id="contact" className="text-primary lg:p-28 px-4 mt-12 lg:mt-0">
@@ -60,7 +66,7 @@ export default function Contact() {
               <input className="col-span-2 bg-transparent border py-2 px-5 rounded-lg" placeholder="Subject" type="text" name="subject" required/>
               <textarea className="col-span-2 bg-transparent border py-2 px-5 rounded-lg h-[100px]" placeholder="Message" name="message" required cols="30" rows="10"></textarea>
             </div>
-            <button  type="submit" className="bg-[#383838] mx-auto px-3 py-2 rounded-lg hover:bg-[#595959] mt-4 w-full">Send It!</button>
+            <button  type="submit" className="bg-[#383838] mx-auto px-3 py-2 rounded-lg hover:bg-[#595959] mt-4 w-full" disabled={isLoading}>{isLoading ? (<ClipLoader color="#fff" size={15}  />) : ('Send It!')}</button>
           </form>
         </div>
       </div>
