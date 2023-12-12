@@ -4,8 +4,7 @@ import "./hero.css"
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Typewriter from 'typewriter-effect'
 import ScrollVelocity from './scroll-velocity/ScrollVelocity'
-import hantu from "../../../assets/hantu.json"
-import Lottie from "lottie-react";
+
 
 
 const Hero = () => {
@@ -115,7 +114,7 @@ const Hero = () => {
                 delay: 2.1
               }
             }}
-            className='w-[300px] lg:w-[300px] lg:h-[300px] z-[2]  border-4  border-primary grayscale-0 hover:grayscale ' src={profil} alt="profil" />
+            className='w-[300px] lg:w-[400px] lg:h-[400px] z-[2]  border-4  border-primary grayscale hover:grayscale-0 cursor-pointer ' src={profil} alt="profil" />
           <motion.div 
           initial={{ y: -400, opacity: 1 }}
           animate={{
@@ -126,7 +125,6 @@ const Hero = () => {
             }
           }}
           className='absolute flex-col justify-end items-center leading-[8.5rem] tracking-tighter uppercase text-[4rem] lg:text-[11rem] font-bold opacity-50 pointer-events-none  text-gray-400 flex'>
-          <Lottie animationData={hantu}/>
           </motion.div>
         </div>
       </div>

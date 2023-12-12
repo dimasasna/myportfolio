@@ -7,7 +7,7 @@ export default function HeroAbout() {
         <div className="lg:w-[70%] w-full flex flex-col gap-6">
 
           <div className="flex lg:flex-row flex-col gap-4 items-center mt-12 lg:mt-0">
-            <img className="lg:w-[250px]" src={profil} alt="" />
+            <img className="lg:w-[250px]" src={profil} alt="profilAbout" />
             <p className="leading-relaxed tracking-wider  lg:w-[50%]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit aut fuga iusto officia velit. Provident libero facilis aspernatur error reiciendis.</p>
           </div>
           <div>

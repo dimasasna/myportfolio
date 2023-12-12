@@ -50,7 +50,7 @@ const Service = () => {
                         <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.laravel}</span>
                         <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.tailwind}</span>
                     </div>
-                
+                    
             </div>
         </section>
     )

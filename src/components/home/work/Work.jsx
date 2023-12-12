@@ -17,7 +17,7 @@ const Work = () => {
         title: "HiSocial",
         desc: "Web Application",
         img: hisocial,
-        altImage: "HiSocial Image",
+        altImage: "HiSocialImage",
         link: "https://www.hisocial.id"
     }
     const beShoes = {
@@ -25,7 +25,7 @@ const Work = () => {
         title: "Beshoes 'Shoes Laundry'",
         desc: "Web Application",
         img: beshoes,
-        altImage: "beshoes Image",
+        altImage: "beshoesImage",
         link: "https://github.com/dimasasna/shoes-laundry-personal"
     }
 
