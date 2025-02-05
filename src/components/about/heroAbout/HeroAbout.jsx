@@ -1,6 +1,10 @@
+import { useState } from "react"
 import profil from "./../../../assets/profil.webp"
 
 export default function HeroAbout() {
+  const [state] = useState({
+    about: "Hi there! Im Dimas Asna Nugraha, a passionate about Fullstack Developer. Whether its crafting beautiful frontend interfaces or diving into the complexities of backend development."
+  })
   return (
     <section className="w-[100%] text-primary">
       <div className="lg:p-28 p-4 w-[100%] flex flex-col lg:flex-row">
@@ -8,7 +12,7 @@ export default function HeroAbout() {
 
           <div className="flex lg:flex-row flex-col gap-4 items-center mt-12 lg:mt-0">
             <img className="lg:w-[250px]" src={profil} alt="profilAbout" />
-            <p className="leading-relaxed tracking-wider  lg:w-[50%]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit aut fuga iusto officia velit. Provident libero facilis aspernatur error reiciendis.</p>
+            <p className="leading-relaxed tracking-wider  lg:w-[50%]">{state.about}</p>
           </div>
           <div>
             <a href="#contact" className=' underline text-xl mt-4 cursor-pointer hover:text-secondary'>Feel Free Contact Me<i className="uil uil-arrow-up-right"></i></a>
