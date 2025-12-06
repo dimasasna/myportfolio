@@ -22,7 +22,7 @@ const About = () => {
       </div>
       <div className='z-[2] mt-12 px-4 lg:w-[60%] leading-[2rem] font-extrabold text-primary'>
         <Fade direction="down">
-          <h1 className='lg:text-4xl text-xl font-thin mb-4 relative'>Hi there! Im Dimas Asna Nugraha, a passionate about <span className=" text-yellow-200 hover:text-primary cursor-pointer">Fullstack Developer</span>. Whether its crafting beautiful <span className="text-yellow-200 hover:text-primary cursor-pointer">frontend interfaces</span> or diving into the complexities of <span className="text-yellow-200 hover:text-primary cursor-pointer">backend development</span>.</h1></Fade>
+          <h1 className='lg:text-4xl text-xl font-thin mb-4 relative'>Hi there! Im Dimas Asna Nugraha, I combine analytical thinking and technical skills to design efficient <span className="text-yellow-200 hover:text-primary cursor-pointer">test processes</span> that improve <span className="text-yellow-200 hover:text-primary cursor-pointer">product quality</span> and <span className="text-yellow-200 hover:text-primary cursor-pointer">development speed</span></h1></Fade>
         <Fade direction="up">
           <Link className="underline text-2xl mt-4 hover:text-secondary" to={"/about"}>{state.link}<i className="uil uil-arrow-up-right "></i></Link></Fade>
         <div className="mt-[30px]">

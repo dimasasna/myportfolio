@@ -4,10 +4,11 @@ import "./service.css"
 
 const Service = () => {
     const [state] = useState({
-        developer: "Developer",
-        frontend: "Frontend",
-        backend: "Backend",
-        fullstack: "Fullstack",
+        developer: "Tester",
+        assurance: "Assurance",
+        frontend: "Quality",
+        backend: "Website",
+        fullstack: "Mobile",
         html: "HTML5",
         css: "CSS3",
         javascript: "Javascript",
@@ -16,7 +17,12 @@ const Service = () => {
         sql: "MySQL",
         bootstrap: "Bootstrap",
         laravel: "Laravel",
-        tailwind: "Tailwind"
+        tailwind: "Tailwind",
+        python: "Python",
+        selenium: "Selenium",
+        pytest: "Pytest",
+        katalon: "Katalon",
+        postman: "Postman",
     })
     const { scrollYProgress } = useScroll()
     const frontend = useTransform(scrollYProgress, [0, 1], [0, 600])
@@ -25,12 +31,12 @@ const Service = () => {
     return (
         <section id='service' className='text-primary bg-color-text relative overflow-hidden w-[100%] h-[100vh] flex flex-col justify-center items-center gap-[5rem]'>
             <div className='text-[4rem] lg:text-[6rem] uppercase font-black italic whitespace-nowrap flex flex-col items-start lg:leading-[5rem] leading-[3rem] pointer-events-none'>
-                <motion.span style={{ x: frontend }}>{state.frontend} <span className='textOutlined'>{state.developer}</span> - {state.frontend}
-                    <span className='textOutlined'>{state.developer}</span> - {state.frontend}
-                    <span className='textOutlined'>{state.developer}</span> - </motion.span>
+                <motion.span style={{ x: frontend }}>{state.frontend} <span className='textOutlined'>{state.assurance}</span> - {state.frontend}
+                    <span className='textOutlined'> {state.assurance}</span> - {state.frontend}
+                    <span className='textOutlined'> {state.assurance}</span> - </motion.span>
                 <motion.span style={{ x: backend }}>{state.backend} <span className='textOutlined'>{state.developer}</span> - {state.backend}
-                    <span className='textOutlined'>{state.developer}</span> - {state.backend}
-                    <span className='textOutlined'>{state.developer}</span> - </motion.span>
+                    <span className='textOutlined'> {state.developer}</span> - {state.backend}
+                    <span className='textOutlined'> {state.developer}</span> - </motion.span>
                 <motion.span style={{ x: fullstack }}> <span className='textOutlined'>{state.fullstack} </span>{state.developer} - <span className='textOutlined'>{state.fullstack} </span>
                     {state.developer} - <span className='textOutlined'>{state.fullstack} </span>
                     {state.developer} - </motion.span>
@@ -49,6 +55,13 @@ const Service = () => {
                         <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.bootstrap}</span>
                         <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.laravel}</span>
                         <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.tailwind}</span>
+                        <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.python}</span>
+                    </div>
+                    <div className='flex flex-col lg:flex-row gap-[1rem] text-2xl text-center'>
+                        <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.selenium}</span>
+                        <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.pytest}</span>
+                        <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.katalon}</span>
+                        <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.postman}</span>
                     </div>
                     
             </div>
