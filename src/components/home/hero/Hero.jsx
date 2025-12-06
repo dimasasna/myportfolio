@@ -10,8 +10,8 @@ import ScrollVelocity from './scroll-velocity/ScrollVelocity'
 const Hero = () => {
   const [state] = useState({
     name: "Dimas Asna Nugraha",
-    title1: "Software Engineer",
-    title2: "Website Developer"
+    title1: "Software Quality Assurance",
+    title2: "Website And Mobile Tester"
   })
   const { scrollYProgress } = useScroll()
   const right = useTransform(scrollYProgress, [0, 1], [0, 400])
@@ -114,7 +114,7 @@ const Hero = () => {
                 delay: 2.1
               }
             }}
-            className='w-[300px] lg:w-[400px] lg:h-[400px] z-[2]  border-4  border-primary grayscale hover:grayscale-0 cursor-pointer ' src={profil} alt="profil" />
+            className='w-[300px] lg:w-[500px] lg:h-[500px] z-[2] border-4  border-primary grayscale hover:grayscale-0 cursor-pointer ' src={profil} alt="profil" />
           <motion.div 
           initial={{ y: -400, opacity: 1 }}
           animate={{
