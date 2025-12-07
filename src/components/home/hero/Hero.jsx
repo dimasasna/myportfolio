@@ -4,7 +4,7 @@ import "./hero.css"
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Typewriter from 'typewriter-effect'
 import ScrollVelocity from './scroll-velocity/ScrollVelocity'
-
+import { FiDownload } from "react-icons/fi";
 
 
 const Hero = () => {
@@ -104,7 +104,22 @@ const Hero = () => {
             style={{ x: left }}
             className='absolute uppercase  pointer-events-none italic text-primary  whitespace-nowrap text-[5rem] lg:text-[6rem]  font-extrabold textOutlined z-[3]'><ScrollVelocity baseVelocity={-2}>{state.title2}</ScrollVelocity></motion.h1>
         </div>
-        <div className='h-[100vh] flex justify-center items-center lg:pb-36'>
+        <div className='h-[100vh] flex justify-center items-center flex-col lg:pb-36'>
+          <motion.a
+          href='CV - Dimas Asna Nugraha.pdf' 
+          initial={{ y: -400, opacity: 1}}
+          animate={{
+              y: 0,
+              transition: {
+                duration: 1,
+                delay: 2.1
+              }
+            }}
+          className='flex flex-row items-center gap-2 cursor-pointer bg-white text-black px-4 py-2 rounded-3xl mb-6 hover:bg-gray-500 transition-all duration-300  '>
+            <FiDownload />
+            <button>Download CV</button>
+          </motion.a>
+          
           <motion.img
             initial={{ y: 400, opacity: 1 }}
             animate={{
