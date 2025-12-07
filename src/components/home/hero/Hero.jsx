@@ -5,6 +5,8 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import Typewriter from 'typewriter-effect'
 import ScrollVelocity from './scroll-velocity/ScrollVelocity'
 import { FiDownload } from "react-icons/fi";
+import { GiRamProfile } from "react-icons/gi";
+import { Link } from 'react-router-dom'
 
 
 const Hero = () => {
@@ -105,21 +107,40 @@ const Hero = () => {
             className='absolute uppercase  pointer-events-none italic text-primary  whitespace-nowrap text-[5rem] lg:text-[6rem]  font-extrabold textOutlined z-[3]'><ScrollVelocity baseVelocity={-2}>{state.title2}</ScrollVelocity></motion.h1>
         </div>
         <div className='h-[100vh] flex justify-center items-center flex-col lg:pb-36'>
-          <motion.a
-          href='CV - Dimas Asna Nugraha.pdf' 
-          initial={{ y: -400, opacity: 1}}
-          animate={{
-              y: 0,
-              transition: {
-                duration: 1,
-                delay: 2.1
-              }
-            }}
-          className='flex flex-row items-center gap-2 cursor-pointer bg-white text-black px-4 py-2 rounded-3xl mb-6 hover:bg-gray-500 transition-all duration-300  '>
-            <FiDownload />
-            <button>Download CV</button>
-          </motion.a>
-          
+          <div className='flex flex-row gap-4'>
+            <motion.a
+              href='CV - Dimas Asna Nugraha.pdf'
+              initial={{ y: -400, opacity: 1 }}
+              animate={{
+                y: 0,
+                transition: {
+                  duration: 1,
+                  delay: 2.1
+                }
+              }}
+              className='lg:mt-20 flex flex-row items-center gap-2 cursor-pointer bg-white text-black px-4 py-2 rounded-3xl mb-6 hover:bg-gray-500 transition-all duration-300  '>
+              <FiDownload />
+              <button>Download CV</button>
+            </motion.a>
+            <motion.div
+              initial={{ y: -400, opacity: 1 }}
+              animate={{
+                y: 0,
+                transition: { duration: 1, delay: 2.1 }
+              }}
+            >
+              <Link
+                to="/about"
+                className="lg:mt-20 flex flex-row items-center gap-2 cursor-pointer bg-white text-black px-4 py-2 rounded-3xl mb-6 hover:bg-gray-500 transition-all duration-300"
+              >
+                <GiRamProfile />
+                <span>More About Me</span>
+              </Link>
+            </motion.div>
+          </div>
+
+
+
           <motion.img
             initial={{ y: 400, opacity: 1 }}
             animate={{
@@ -130,16 +151,16 @@ const Hero = () => {
               }
             }}
             className='w-[300px] lg:w-[500px] lg:h-[500px] z-[2] border-4  border-primary grayscale hover:grayscale-0 cursor-pointer ' src={profil} alt="profil" />
-          <motion.div 
-          initial={{ y: -400, opacity: 1 }}
-          animate={{
-            y: 0,
-            transition: {
-              duration: 1,
-              delay: 2.1
-            }
-          }}
-          className='absolute flex-col justify-end items-center leading-[8.5rem] tracking-tighter uppercase text-[4rem] lg:text-[11rem] font-bold opacity-50 pointer-events-none  text-gray-400 flex'>
+          <motion.div
+            initial={{ y: -400, opacity: 1 }}
+            animate={{
+              y: 0,
+              transition: {
+                duration: 1,
+                delay: 2.1
+              }
+            }}
+            className='absolute flex-col justify-end items-center leading-[8.5rem] tracking-tighter uppercase text-[4rem] lg:text-[11rem] font-bold opacity-50 pointer-events-none  text-gray-400 flex'>
           </motion.div>
         </div>
       </div>

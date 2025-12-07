@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css'
 import About from './pages/About';
 import Home from './pages/Home'
 import ScrollToTop from 'react-scroll-to-top';

@@ -41,7 +41,7 @@ const Service = () => {
                     {state.developer} - <span className='textOutlined'>{state.fullstack} </span>
                     {state.developer} - </motion.span>
             </div>
-            <div className='flex lg:flex-col justify-center items-center gap-[1rem]'>
+            <div className='grid grid-cols-2 lg:flex flex-col justify-center items-center gap-[1rem]'>
                 
                     <div className='flex flex-col lg:flex-row gap-[1rem] text-2xl text-center'>
                         <span className='px-[1rem] hover:bg-primary hover:text-color-text border-2 border-primary rounded-[25px] transition-all duration-300'>{state.html}</span>

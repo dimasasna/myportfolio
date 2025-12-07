@@ -1,34 +1,73 @@
-import { useState } from "react"
+import { FaGithub } from "react-icons/fa"
+import { BsFileEarmarkSpreadsheet } from "react-icons/bs"
 
-
-const CardWork = (props) => {
-    const [state] = useState({
-        link: "Online Preview"
-    })
+const CardWork = ({ 
+    title, 
+    status, 
+    statusColor = "text-green-700", 
+    desc, 
+    tech = [], 
+    category, 
+    categoryColor = "text-blue-400 bg-blue-400/10 inset-ring inset-ring-blue-400/20",
+    githubLink,
+    docLink
+}) => {
     return (
-        <div>
-            <div className='flex relative overflow-hidden whitespace-nowrap lg:flex-row flex-col mt-14 lg:mt-0  justify-center items-center gap-4 lg:translate-y-[-6rem] translate-y-[-5rem] w-[100%] h-auto'>
-                <div className='flex flex-col text-primary gap-5 group overflow-hidden'>
-                    <img className='lg:w-[450px] lg:h-[450px] group-hover:scale-105 transition-all duration-500 ' src={props.img} alt={props.altImg} />
-                    <div className='flex flex-row items-center gap-2'>
-                        <span className='font-bold text-2xl'>{props.nomor}</span>
-                        <div className='flex flex-col'>
-                            <span className='text-2xl font-bold'>{props.title}</span>
-                            <span className='text-[1rem]'>{props.desc}</span>
-                        </div>
-                    </div>
+        <div className='w-full text-white border border-gray-500 shadow rounded-3xl p-5 
+            hover:scale-105 transition duration-300 bg-[#1d1d1d]'>
+
+            {/* Title + Status */}
+            <div className="flex justify-between mb-3 border-b border-b-gray-500 pb-2">
+                <span className="font-semibold">{title}</span>
+                <span className={`text-sm italic opacity-80 ${statusColor}`}>
+                    {status}
+                </span>
+            </div>
+
+            {/* Description */}
+            <p className="text-sm opacity-80 pb-2">{desc}</p>
+
+            {/* Tech Stack + Category */}
+            <div className="flex justify-between mb-3">
+                <div className="flex gap-2 flex-wrap">
+                    {tech.map((item, idx) => (
+                        <span 
+                            key={idx}
+                            className="inline-flex items-center rounded-md bg-gray-400/10 
+                            px-2 py-1 text-xs font-medium text-gray-400 
+                            inset-ring inset-ring-gray-400/20"
+                        >
+                            {item}
+                        </span>
+                    ))}
                 </div>
-                <div className='lg:h-[50vh] flex items-center lg:items-end lg:w-[40%] w-[100%] justify-center'>
-                    <a className='w-[100%] flex justify-between text-primary border-b-2 border-primary transition-all duration-500 px-[0.3rem] hover:bg-primary hover:text-color-text' href={props.link} target="_blank" rel="noopener noreferrer">
-                        <i className="uil uil-arrow-up-left"></i>
-                        <span>{state.link}</span>
-                    </a>
+
+                {/* Category Badge */}
+                <div>
+                    <span 
+                        className={`inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ${categoryColor}`}
+                    >
+                        {category}
+                    </span>
                 </div>
             </div>
+
+            {/* Links */}
+            <div className="flex flex-row gap-3 text-xl">
+                {githubLink && (
+                    <a href={githubLink} target="_blank" rel="noopener noreferrer">
+                        <FaGithub />
+                    </a>
+                )}
+                {docLink && (
+                    <a href={docLink} target="_blank" rel="noopener noreferrer">
+                        <BsFileEarmarkSpreadsheet />
+                    </a>
+                )}
+            </div>
+
         </div>
     )
 }
-
-
 
 export default CardWork
